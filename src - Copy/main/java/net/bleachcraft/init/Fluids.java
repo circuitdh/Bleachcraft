@@ -16,15 +16,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class Fluids 
 {
 	public static Fluid chlorine;
-	public static Block chlorineBlock;
-
-
-	
 	
 	public static void registerFluids() {
 		
 		chlorine = new Chlorine();
-		FluidRegistry.registerFluid(chlorine);
+		FluidRegistry.registerFluid(Chlorine.instance);
+		FluidRegistry.addBucketForFluid(Chlorine.instance);
 		
 		registerBlock(ChlorineBlock.instance);
 		registerRender(ChlorineBlock.instance);
