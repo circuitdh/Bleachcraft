@@ -40,7 +40,7 @@ public class Fluids
 	public static void registerRender(Block b) {
 
 		Item item = Item.getItemFromBlock(b);
-		ClientProxy.registerFluidRender(item, 0, "bleachcraft:ChlorineBlock,gas");
+		ClientProxy.registerFluidRender(item, 0, "bleachcraft:ChlorineBlock","gas");
 	}
 
 
