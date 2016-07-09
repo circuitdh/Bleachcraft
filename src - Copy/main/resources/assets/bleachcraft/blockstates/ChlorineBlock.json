@@ -7,7 +7,7 @@
     "variants": {
         "gas": [
         {
-            "custom": { "fluid": "fluid_blood" }
+            "custom": { "fluid": "chlorine" }
         }
       ]
     }
