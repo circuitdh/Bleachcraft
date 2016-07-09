@@ -35,8 +35,6 @@ public class ClientProxy extends CommonProxy
                 return gasLocation;
             }
         });
-        
-        
     }
     
     public static void registerItemRender(Item item, int meta)
@@ -44,8 +42,9 @@ public class ClientProxy extends CommonProxy
     	ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
     
-    public static void registerFluidRender(Item item, int meta, String location)
+    public static void registerFluidRender(Item item, int meta, String location, String varient)
     {
-    	ModelLoader.setCustomModelResourceLocation(item, meta,new ModelResourceLocation(location));
+    	ModelLoader.setCustomModelResourceLocation(item, meta,new ModelResourceLocation(location, varient));
     }
+    
 }
