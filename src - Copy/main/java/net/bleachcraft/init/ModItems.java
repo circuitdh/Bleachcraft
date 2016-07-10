@@ -4,6 +4,8 @@ import net.bleachcraft.Items.BleachBottle;
 import net.bleachcraft.Items.BleachBottleClorox;
 import net.bleachcraft.Items.BleachBottleTide;
 import net.bleachcraft.Items.BleachChemicals;
+import net.bleachcraft.Items.ChickenNoodleSoup;
+import net.bleachcraft.Items.Noodle;
 import net.bleachcraft.Proxy.ClientProxy;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -14,6 +16,8 @@ public class ModItems {
 	public static Item bleachChemicals;
 	public static Item bleachBottle;
 	public static Item bleachBottleTide;
+	public static Item chickenNoodleSoup;
+	public static Item noodle;
 
 	public static void registerItems() {
 		
@@ -22,6 +26,8 @@ public class ModItems {
 		bleachBottle = new BleachBottle();
 		bleachChemicals = new BleachChemicals();
 		bleachBottleTide = new BleachBottleTide();
+		noodle = new Noodle();
+		chickenNoodleSoup = new ChickenNoodleSoup();
 		
 		ModItems.reigsterItem(bleachBottleClorox, "bleachBottleClorox");	
 		ClientProxy.registerItemRender(bleachBottleClorox, 0);
@@ -34,6 +40,12 @@ public class ModItems {
 		
 		ModItems.reigsterItem(bleachChemicals, "bleachChemicals");	
 		ClientProxy.registerItemRender(bleachChemicals, 0);
+		
+		ModItems.reigsterItem(noodle, "noodle");
+		ClientProxy.registerItemRender(noodle, 0);
+		
+		ModItems.reigsterItem(chickenNoodleSoup, "chickenNoodleSoup");
+		ClientProxy.registerItemRender(chickenNoodleSoup, 0);
 		
 	}
 	
