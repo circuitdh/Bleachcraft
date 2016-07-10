@@ -1,5 +1,9 @@
-itemGroup.sampleTab=Sample Tab
+itemGroup.sampleTab=BleachCraft
 item.bleachBottleClorox.name=Clorox
 item.bleachBottle.name=Mundane Bleach 
 item.bleachBottleTide.name=Tide
+item.noodle.name=Noodle
+item.chickenNoodleSoup.name=Chicken Noodle Soup 
 item.bleachChemicals.name=Bleach Chemicals
+tile.chlorineBlock.name=Chlorine
+item.chlorineBucket.name=Chlorine Bucket
