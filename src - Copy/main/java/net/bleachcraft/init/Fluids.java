@@ -13,33 +13,21 @@ import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class Fluids 
-{
+public class Fluids {
 	public static Fluid chlorine;
-	
+
 	public static void registerFluids() {
-		
+
 		chlorine = new Chlorine();
 		FluidRegistry.registerFluid(Chlorine.instance);
 		FluidRegistry.addBucketForFluid(Chlorine.instance);
-		
+
 		registerBlock(ChlorineBlock.instance);
-		registerRender(ChlorineBlock.instance);
 	}
-	
-	
+
 	public static void registerBlock(Block b) {
-		
+
 		GameRegistry.register(b);
-        GameRegistry.register(new ItemBlock(b).setRegistryName(b.getRegistryName()));
+		GameRegistry.register(new ItemBlock(b).setRegistryName(b.getRegistryName()));
 	}
-	
-	public static void registerRender(Block b) {
-
-		Item item = Item.getItemFromBlock(b);
-		ClientProxy.registerFluidRender(item, 0, "bleachcraft:ChlorineBlock","gas");
-	}
-
-
-
 }
