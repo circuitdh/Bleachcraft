@@ -12,9 +12,17 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 public class ClientProxy extends CommonProxy {
+
 	private static ModelResourceLocation gasLocation = new ModelResourceLocation("bleachcraft" + ":" + "ChlorineBlock",
 			"gas");
 
+	public static Item bleachBottleClorox;
+	public static Item bleachChemicals;
+	public static Item bleachBottle;
+	public static Item bleachBottleTide;
+	public static Item chickenNoodleSoup;
+	public static Item noodle;
+	
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 		super.preInit(event);
@@ -30,16 +38,18 @@ public class ClientProxy extends CommonProxy {
 				return gasLocation;
 			}
 		});
-
+				
+		ClientProxy.registerItemRender(bleachBottleClorox, 0);
+		ClientProxy.registerItemRender(bleachBottle, 0);
+		ClientProxy.registerItemRender(bleachBottleTide, 0);
+		ClientProxy.registerItemRender(bleachChemicals, 0);
+		ClientProxy.registerItemRender(noodle, 0);
+		ClientProxy.registerItemRender(chickenNoodleSoup, 0);
 	}
 
 	public static void registerItemRender(Item item, int meta) {
 		ModelLoader.setCustomModelResourceLocation(item, meta,
 				new ModelResourceLocation(item.getRegistryName(), "inventory"));
-	}
-
-	public static void registerFluidRender(Item item, int meta, String location, String varient) {
-		ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(location, varient));
 	}
 
 }
