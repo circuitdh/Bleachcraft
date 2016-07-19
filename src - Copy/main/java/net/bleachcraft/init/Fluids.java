@@ -31,3 +31,4 @@ public class Fluids {
 		GameRegistry.register(new ItemBlock(b).setRegistryName(b.getRegistryName()));
 	}
 }
+ 
