@@ -30,22 +30,11 @@ public class ModItems {
 		chickenNoodleSoup = new ChickenNoodleSoup();
 		
 		ModItems.reigsterItem(bleachBottleClorox, "bleachBottleClorox");	
-		ClientProxy.registerItemRender(bleachBottleClorox, 0);
-		
 		ModItems.reigsterItem(bleachBottle, "bleachBottle");	
-		ClientProxy.registerItemRender(bleachBottle, 0);
-		
 		ModItems.reigsterItem(bleachBottleTide, "bleachBottleTide");
-		ClientProxy.registerItemRender(bleachBottleTide, 0);
-		
 		ModItems.reigsterItem(bleachChemicals, "bleachChemicals");	
-		ClientProxy.registerItemRender(bleachChemicals, 0);
-		
 		ModItems.reigsterItem(noodle, "noodle");
-		ClientProxy.registerItemRender(noodle, 0);
-		
 		ModItems.reigsterItem(chickenNoodleSoup, "chickenNoodleSoup");
-		ClientProxy.registerItemRender(chickenNoodleSoup, 0);
 		
 	}
 	
